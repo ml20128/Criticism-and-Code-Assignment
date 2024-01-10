@@ -64,7 +64,7 @@
         <l>Great Gatsby and The Last Tycoon: 0.8965760304322227</l>	
         <l>The Beautiful and the Damned and Tender is the Night: 0.9572308203563318</l>
     </p>
-    <p class="wrap-text" style="color:black; font-size: 60%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>>   
+    <p class="wrap-text" style="color:black; font-size: 60%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>   
         The instances where the matrix includes the numeric value of 1 indicates the comparison between one and the same book, which are obviously perfectly correlated. 
     </p>
     <p class="wrap-text" style="color:black; font-size: 60%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
@@ -74,7 +74,7 @@
         I then imported seaborn and matplotlib to create my heatmap of the correlation coefficients (from the correlation matrix) between Fitzgerald’s novels.
     </p>
     <p class="wrap-text">
-    <img src="images/heatmap1.png" width="400" height="300">   
+    <img src="images/heatmap1.png" width="600" height="500">   
     </p> 
     <p class="wrap-text" style="color:black; font-size: 60%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
         As for the results from this visualisation, we can say that This Side of Paradise and The Last Tycoon are the most similar in word frequency with a correlation score of 0.9572, even though they were published 21 years apart (respectively in 1920 and in 1941). This is surprising as one would assume that novels written closer together in time would be more similar in the vocabulary used. From the results of my analysis and the most frequent words used in these novels, there is not much to be said about the thematic similarity they might have. After I read their summaries, I was again not convinced that there was an argument to be made about why these books might be similar. In terms of the themes they cover, This Side of Paradise talks about the disillusionment of the young generations after the First World War, whereas The Last Tycoon explores the beginnings of Hollywood film industry through a young star who makes his debut in the film industry. If we look at the most frequent words found in them, we find ‘the’, ‘and’, ‘a’, ‘of’, and ‘to’, which don’t really say much about the books themselves. Now, this is partly because I didn’t include any stopwords in my code. But it probably also just means that the words that come up the most are words that appear in (almost) every sentence – notably articles and conjunctions for example. We might be inclined to say that Fitzgerald is especially descriptive if he uses a lot of articles in his novels and that he explains a lot of things through connecting ideas which the words ‘to’, ‘of’ and ‘and’ might convey. But I think this is a much too broad thing to say and could be said about any author, and so I believe that it is probably just luck that determined the high correlation score between these two novels. 
@@ -110,13 +110,13 @@
         Lastly then, I wanted to experiment a bit more with the visualisations in python and asked ChatGPT how to code a node-and-edge graph for the correlations between all these texts. I learned that there are different layouts in NetworkX like the Spring or Circular layout. I tried both the spring_layout() and the shell_layout() functions and decided that the Shell looked a little more ordered and was easier to read. Here are both graphs next to each other:
     </p>
     <p class="wrap-text">
-    <img src="images/spring_layout.png" width="400" height="300">
+    <img src="images/spring_layout.png" width="500" height="400">
     </p>
     <p>
 
     </p>
     <p class="wrap-text">
-    <img src="images/shell_layout.png" width="400" height="300">
+    <img src="images/shell_layout.png" width="500" height="400">
     </p>
     <p class="wrap-text" style="color:black; font-size: 60%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
         What remains to be said about these is that the thickness of the edges represents the higher correlation score between the two texts, which is why the lowest connecion of 0.54 on the edge between Tender is the Night and Othello is almost not visible because it is so thin.
