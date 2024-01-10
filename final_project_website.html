@@ -64,8 +64,8 @@
         <l>Great Gatsby and The Last Tycoon: 0.8965760304322227</l>	
         <l>The Beautiful and the Damned and Tender is the Night: 0.9572308203563318</l>
     </p>
-    <p>   
-        <l>The instances where the matrix includes the numeric value of 1 indicates the comparison between one and the same book, which are obviously perfectly correlated.</l> 
+    <p class="wrap-text" style="color:black; font-size: 60%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>>   
+        The instances where the matrix includes the numeric value of 1 indicates the comparison between one and the same book, which are obviously perfectly correlated. 
     </p>
     <p class="wrap-text" style="color:black; font-size: 60%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
         When I first analysed the scatter plot graphs, I compared them to the tables I had produced earlier with the word frequency rankings. And I noticed something strange: the words that in my eyes looked the most ‘highly ranked’ in the graph (in the top-right corner) were non-existent in the list that I had produced. So I proceeded to ask ChatGPT and learned that actually, the highest ranked words were placed in the bottom-left corner, as they had a ranking number closer to 1, thus being at the top of the list, whereas the words placed more towards the right of the graph have a higher ranking score and are therefore lowers on the rank list. Additionally, the diagonal line close to which most words are placed signals a high correlation between the words. Without the outliers, most words lie on this diagonal, which explains the relatively high correlation scores achieved through the correlation=np.corrcoef function.
@@ -101,7 +101,7 @@
         In this visualisation, the most highly correlated texts are (not surprisingly) the novels/plays by the same author. But on further inspection, we can see that Shakespeare’s Othello and Defoe’s Robinson Crusoe have a correlation score of 0.8241, which seems quite high for two texts written by different authors and more than a century apart. This intrigued me and I wanted to see what their most frequent words were, so I replaced the file paths at the top of my code with these two texts and looked at their word ranking graph:
     </p>
     <p class="wrap-text">
-    <img src="images/graph3.png" width="400" height="300">
+    <img src="images/graph3.png" width="600" height="500">
     </p>
     <p class="wrap-text" style="color:black; font-size: 60%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
         There are two things that are notable in this scatter plot. Firstly, the top ranked words are, again, the same conjunctions and pronouns as with Fitzgerald’s novels, except for the ‘I’ and ‘my’ which differs from the ‘he’. This again confirms the argument that these words tend to be the most frequent ones in many texts, and don’t say anything specific about their authors. Secondly however, if we look at the scatter plot more broadly, we see that the personal pronouns are limited to the first person (‘me’, ‘my’, ‘I’) and the male (‘he’, ‘him’, ‘his’): there are no female pronouns at all in the graph.  This seems to suggest that female characters are less important in these texts, and although Desdemona is a crucial character in Othello, it is indeed more the men around her that are driving the action. In Robinson Crusoe, there are indeed no female characters at all in the story which explains the lack of female pronouns.
