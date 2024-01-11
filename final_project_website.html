@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            text-align: justify;
+            text-align: justify;   
         }
         .wrap-text {
             word-wrap: break-word;
@@ -19,6 +19,10 @@
             align-items: center;
             padding: 20px;
         }
+        .centeralign {
+            text-align: center;
+        }
+        
     </style>
 </head>
 <body style="background-color:powderblue;"">
@@ -52,7 +56,8 @@
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
         Next, I knew I had to calculate some kind of numerical relation between the rankings of each novel – something like a similarity score. Because I didn’t know what function to use in python to calculate something like that, I asked ChatGPT and it gave me the option to calculate the correlation coefficient np.corrcoef from NumPy. Next, ChatGPT advised me to make a correlation matrix – I learned that a correlation matrix is a table that contains correlation coefficients between variables. The coefficient ranges from -1 to 1 where -1 indicates a perfect negative correlation, 0 indicates no correlation and 1 indicates a perfect positive correlation. For my examples, this meant that the closer this number for either pair of novels was to 1, the higher correlation existed between the rankings of their most frequently used words. This is the list of correlation values that I used to fill in my correlation matrix, where I only used the 4 first numbers after the comma for the purpose of ease of reading: 
     </p>
-    <div> class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
+    <div class="wrap-text" class="centeralign">
+    <p style="color:black; font-size: 100%; font-family: 'Roboto'"></style>
         <li>Great Gatsby and Tender is the Night: 0.8886205337597816</li>
         <li>This Side of Paradise and The Last Tycoon: 0.9116729608935584</li>
         <li>The Beautiful and the Damned and Great Gatsby: 0.8908950783842086</li>
@@ -63,6 +68,7 @@
         <li>Great Gatsby and This Side of Paradise: 0.8965582919975044</li>
         <li>Great Gatsby and The Last Tycoon: 0.8965760304322227</li>	
         <li>The Beautiful and the Damned and Tender is the Night: 0.9572308203563318</li>
+    </p>
     </div>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>   
         The instances where the matrix includes the numeric value of 1 indicates the comparison between one and the same book, which are obviously perfectly correlated. 
