@@ -29,10 +29,21 @@
         .centeralign {
             text-align: center;
         }
+        .data-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px; 
+        }
+
+        .data-table th, .data-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
         
     </style>
 </head>
-<body style="background-color:powderblue;"">
+<body style="background-color:powderblue;">
     <h1 style="font-size: 180%; font-family:'Roboto', Georgia, 'Times New Roman', Times, serif; text-align: center;">
         Final Project Criticism and Code 
     </h1>
@@ -43,7 +54,7 @@
         IDEA
     </h2>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
-        When I thought about ideas for my project, I knew I wanted to do something with data analysis tools in python, as I was eager to put my newly acquired coding skills to use. I also wanted to visualize some aspect of a text with a graph as well as compare these findings to other authors and their texts. And as I kept thinking about these elements, I concluded that what I wanted to do was analyse the writing style between authors to identify a text based on a numerical value or at least in comparison to other texts’ values. I decided that word frequency was probably a good way to start getting into the texts and started with F. Scott Fitzgerald’s five most notable novels: Great Gatsby, This Side of Paradise, The Last Tycoon, The Beautiful And The Damned, and Tender Is the Night. Even though I realised later that word frequency alone is probably not the best indicator to differentiate between authors, I still gave it a go just to see what I would find.   
+        When I thought about ideas for my project, I knew I wanted to do something with data analysis tools in python, as I was eager to put my newly acquired coding skills to use. I also wanted to visualize some aspect of a text with a graph as well as compare these findings to other authors and their texts. And as I kept thinking about these elements, I concluded that what I wanted to do was analyse the writing style between authors to identify a text based on a numerical value or at least in comparison to other texts’ values. I decided that word frequency was probably a good way to start getting into the texts and started with F. Scott Fitzgerald’s five most notable novels: <em>Great Gatsby</em>, <em>This Side of Paradise</em>, <em>The Last Tycoon</em>, <em>The Beautiful And The Damned</em>, and <em>Tender Is the Night</em>. Even though I realised later that word frequency alone is probably not the best indicator to differentiate between authors, I still gave it a go just to see what I would find.   
     </p>
     <h2 class="wrap-text" style="background-color:lightsalmon; color: rgb(69, 67, 67); font-size: 120%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
         EXECUTION
@@ -65,18 +76,97 @@
     </p>
     <div align="center">
     <p class= "wrap-text" class="centeralign" style= "color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif; text-align: center;"></style>
-        <li>Great Gatsby and Tender is the Night: 0.8886205337597816</li>
-        <li>This Side of Paradise and The Last Tycoon: 0.9116729608935584</li>
-        <li>The Beautiful and the Damned and Great Gatsby: 0.8908950783842086</li>
-        <li>Tender is the Night and This Side of Paradise: 0.9207065572935264</li>
-        <li>The Last Tycoon and The Beautiful and the Damned: 0.8794442733164988</li>
-        <li>The Last Tycoon and Tender is the Night: 0.8976060711396049</li>
-        <li>The Beautiful and the Damned and This Side of Paradise: 0.9303328882441039</li>
-        <li>Great Gatsby and This Side of Paradise: 0.8965582919975044</li>
-        <li>Great Gatsby and The Last Tycoon: 0.8965760304322227</li>	
-        <li>The Beautiful and the Damned and Tender is the Night: 0.9572308203563318</li>
+        <div align="center">
+            <table style="color: black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif; text-align: left; border: 1px solid black; border-collapse: collapse;">
+              <tr>
+                <th style="border: 1px solid black; padding: 10px">Book Pair</th>
+                <th style="border: 1px solid black; padding: 10px">
+                  Similarity Score
+                </th>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black; padding: 8px">
+                  <em>Great Gatsby</em> and <em>Tender is the Night</em>
+                </td>
+                <td style="border: 1px solid black; padding: 8px">
+                  0.8886205337597816
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black; padding: 8px">
+                  <em>This Side of Paradise</em> and <em>The Last Tycoon</em>
+                </td>
+                <td style="border: 1px solid black; padding: 8px">
+                  0.9116729608935584
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black; padding: 8px">
+                  <em>The Beautiful and the Damned</em> and <em>Great Gatsby</em>
+                </td>
+                <td style="border: 1px solid black; padding: 8px">
+                  0.8908950783842086
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black; padding: 8px">
+                  <em>Tender is the Night</em> and <em>This Side of Paradise</em>
+                </td>
+                <td style="border: 1px solid black; padding: 8px">
+                  0.9207065572935264
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black; padding: 8px">
+                  <em>The Last Tycoon</em> and <em>The Beautiful and the Damned</em>
+                </td>
+                <td style="border: 1px solid black; padding: 8px">
+                  0.8794442733164988
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black; padding: 8px">
+                  <em>The Last Tycoon</em> and <em>Tender is the Night</em>
+                </td>
+                <td style="border: 1px solid black; padding: 8px">
+                  0.8976060711396049
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black; padding: 8px">
+                  <em>The Beautiful and the Damned</em> and <em>This Side of Paradise</em>
+                </td>
+                <td style="border: 1px solid black; padding: 8px">
+                  0.9303328882441039
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black; padding: 8px">
+                  <em>Great Gatsby</em> and <em>This Side of Paradise</em>
+                </td>
+                <td style="border: 1px solid black; padding: 8px">
+                  0.8965582919975044
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black; padding: 8px">
+                  <em>Great Gatsby</em> and <em>The Last Tycoon</em>
+                </td>
+                <td style="border: 1px solid black; padding: 8px">
+                  0.8965760304322227
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black; padding: 8px">
+                  <em>The Beautiful and the Damned</em> and <em>Tender is the Night</em>
+                </td>
+                <td style="border: 1px solid black; padding: 8px">
+                  0.9572308203563318
+                </td>
+              </tr>
+            </table>
+        </div>
     </p>
-    </div>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>   
         The instances where the matrix includes the numeric value of 1 indicates the comparison between one and the same book, which are obviously perfectly correlated. 
     </p>
@@ -90,13 +180,13 @@
     <img src="images/heatmap1.png" width="500" height="400">   
     </p> 
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
-        As for the results from this visualisation, we can say that This Side of Paradise and The Last Tycoon are the most similar in word frequency with a correlation score of 0.9572, even though they were published 21 years apart (respectively in 1920 and in 1941). This is surprising as one would assume that novels written closer together in time would be more similar in the vocabulary used. From the results of my analysis and the most frequent words used in these novels, there is not much to be said about the thematic similarity they might have. After I read their summaries, I was again not convinced that there was an argument to be made about why these books might be similar. In terms of the themes they cover, This Side of Paradise talks about the disillusionment of the young generations after the First World War, whereas The Last Tycoon explores the beginnings of Hollywood film industry through a young star who makes his debut in the film industry. If we look at the most frequent words found in them, we find ‘the’, ‘and’, ‘a’, ‘of’, and ‘to’, which don’t really say much about the books themselves. Now, this is partly because I didn’t include any stopwords in my code. But it probably also just means that the words that come up the most are words that appear in (almost) every sentence – notably articles and conjunctions for example. We might be inclined to say that Fitzgerald is especially descriptive if he uses a lot of articles in his novels and that he explains a lot of things through connecting ideas which the words ‘to’, ‘of’ and ‘and’ might convey. But I think this is a much too broad thing to say and could be said about any author, and so I believe that it is probably just luck that determined the high correlation score between these two novels. 
+        As for the results from this visualisation, we can say that <em>This Side of Paradise</em> and <em>The Last Tycoon</em> are the most similar in word frequency with a correlation score of 0.9572, even though they were published 21 years apart (respectively in 1920 and in 1941). This is surprising as one would assume that novels written closer together in time would be more similar in the vocabulary used. From the results of my analysis and the most frequent words used in these novels, there is not much to be said about the thematic similarity they might have. After I read their summaries, I was again not convinced that there was an argument to be made about why these books might be similar. In terms of the themes they cover, <em>This Side of Paradise</em> talks about the disillusionment of the young generations after the First World War, whereas <em>The Last Tycoon</em> explores the beginnings of Hollywood through a young star who makes his debut in the film industry. If we look at the most frequent words found in them, we find ‘the’, ‘and’, ‘a’, ‘of’, and ‘to’, which don’t really say much about the books themselves. Now, this is partly because I didn’t include any stopwords in my code. But it probably also just means that the words that come up the most are words that appear in (almost) every sentence – notably articles and conjunctions for example. We might be inclined to say that Fitzgerald is especially descriptive if he uses a lot of articles in his novels and that he explains a lot of things through connecting ideas which the words ‘to’, ‘of’ and ‘and’ might convey. But I think this is a much too broad thing to say and could be said about any author, and so I believe that it is probably just luck that determined the high correlation score between these two novels. 
     </p>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
-        Next in the correlation score rank, we see The Last Tycoon (1941) and The Beautiful and The Damned (1922) which are 19 years apart. These two novels have a correlation coefficient of 0.9303 and there’s only a very small difference to the previous pair in terms of their most frequent words: ‘the’, ‘a’, and ‘and’ are the same at the top of the list, but then, ‘i’, ‘to’ and ‘he’, which were not in the first pair’s list, follow. This might indicate that these two novels focus more on the relationship between a first-person narrator and a male character, whereas personal pronouns were not part of the first pair’s 6 most frequent words. 
+        Next in the correlation score rank, we see <em>The Last Tycoon</em> (1941) and <em>The Beautiful and The Damned</em> (1922) which are 19 years apart. These two novels have a correlation coefficient of 0.9303 and there’s only a very small difference to the previous pair in terms of their most frequent words: ‘the’, ‘a’, and ‘and’ are the same at the top of the list, but then, ‘i’, ‘to’ and ‘he’, which were not in the first pair’s list, follow. This might indicate that these two novels focus more on the relationship between a first-person narrator and a male character, whereas personal pronouns were not part of the first pair’s 6 most frequent words. 
     </p>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
-        Lastly, the pair of This Side Of Paradise (1920) and The Beautiful and the Damned (1922) have a correlation score of 0.9207. Their first 6 words in the combined dataframes list are very similar to the list of the first pair with ‘the’, ‘and’, ‘a’, ‘of’, ‘to’, and ‘he’. As we find a mix of conjunctions and articles again, which almost align completely with the first pair’s most frequent words, we can say that these words are most probably the same across most (or all) novels. They are not specifically significant in terms of this author’s writing, especially because when we look at the publication dates, it seems counter-intuitive that two novels published 21 years apart have the same list of most frequent words as two novels that were published only two years apart. This proves that it is hard to make an argument specifically about these novels’ author’s writing style.
+        Lastly, the pair of <em>This Side Of Paradise</em> (1920) and <em>The Beautiful and the Damned</em> (1922) have a correlation score of 0.9207. Their first 6 words in the combined dataframes list are very similar to the list of the first pair with ‘the’, ‘and’, ‘a’, ‘of’, ‘to’, and ‘he’. As we find a mix of conjunctions and articles again, which almost align completely with the first pair’s most frequent words, we can say that these words are most probably the same across most (or all) novels. They are not specifically significant in terms of this author’s writing, especially because when we look at the publication dates, it seems counter-intuitive that two novels published 21 years apart have the same list of most frequent words as two novels that were published only two years apart. This proves that it is hard to make an argument specifically about these novels’ author’s writing style.
     </p>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
         Part 2:
@@ -111,13 +201,13 @@
     <img src="images/heatmap2.png" width="600" height="500">
     </p>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
-        In this visualisation, the most highly correlated texts are (not surprisingly) the novels/plays by the same author. But on further inspection, we can see that Shakespeare’s Othello and Defoe’s Robinson Crusoe have a correlation score of 0.8241, which seems quite high for two texts written by different authors and more than a century apart. This intrigued me and I wanted to see what their most frequent words were, so I replaced the file paths at the top of my code with these two texts and looked at their word ranking graph:
+        In this visualisation, the most highly correlated texts are (not surprisingly) the novels/plays by the same author. But on further inspection, we can see that Shakespeare’s <em>Othello</em> and Defoe’s <em>Robinson Crusoe</em> have a correlation score of 0.8241, which seems quite high for two texts written by different authors and more than a century apart. This intrigued me and I wanted to see what their most frequent words were, so I replaced the file paths at the top of my code with these two texts and looked at their word ranking graph:
     </p>
     <p class="wrap-text">
     <img src="images/graph3.png" width="600" height="500">
     </p>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
-        There are two things that are notable in this scatter plot. Firstly, the top ranked words are, again, the same conjunctions and pronouns as with Fitzgerald’s novels, except for the ‘I’ and ‘my’ which differs from the ‘he’. This again confirms the argument that these words tend to be the most frequent ones in many texts, and don’t say anything specific about their authors. Secondly however, if we look at the scatter plot more broadly, we see that the personal pronouns are limited to the first person (‘me’, ‘my’, ‘I’) and the male (‘he’, ‘him’, ‘his’): there are no female pronouns at all in the graph.  This seems to suggest that female characters are less important in these texts, and although Desdemona is a crucial character in Othello, it is indeed more the men around her that are driving the action. In Robinson Crusoe, there are indeed no female characters at all in the story which explains the lack of female pronouns.
+        There are two things that are notable in this scatter plot. Firstly, the top ranked words are, again, the same conjunctions and pronouns as with Fitzgerald’s novels, except for the ‘I’ and ‘my’ which differs from the ‘he’. This again confirms the argument that these words tend to be the most frequent ones in many texts, and don’t say anything specific about their authors. Secondly however, if we look at the scatter plot more broadly, we see that the personal pronouns are limited to the first person (‘me’, ‘my’, ‘I’) and the male (‘he’, ‘him’, ‘his’): there are no female pronouns at all in the graph. This seems to suggest that female characters are less important in these texts, and although Desdemona is a crucial character in <em>Othello</em>, it is indeed more the men around her that are driving the action. In <em>Robinson Crusoe</em>, there are indeed no female characters at all in the story which explains the lack of female pronouns.
     </p>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
         Lastly then, I wanted to experiment a bit more with the visualisations in python and asked ChatGPT how to code a node-and-edge graph for the correlations between all these texts. I learned that there are different layouts in NetworkX like the Spring or Circular layout. I tried both the spring_layout() and the shell_layout() functions and decided that the Shell looked a little more ordered and was easier to read. Here are both graphs next to each other:
@@ -132,7 +222,7 @@
     <img src="images/shell_layout.png" width="500" height="400">
     </p>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
-        What remains to be said about these is that the thickness of the edges represents the higher correlation score between the two texts, which is why the lowest connecion of 0.54 on the edge between Tender is the Night and Othello is almost not visible because it is so thin.
+        What remains to be said about these is that the thickness of the edges represents the higher correlation score between the two texts, which is why the lowest connecion of 0.54 on the edge between <em>Tender is the Night</em> and <em>Othello</em> is almost not visible because it is so thin.
     </p> 
     <h2 class="wrap-text" style="background-color:lightsalmon; color: rgb(69, 67, 67); font-size: 120%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif">
         CONCLUSION
@@ -141,7 +231,7 @@
         Through this project, I have learned that word frequency can be interesting in finding similarities between different authors in the words they use, but when it comes to looking at different texts from one author, it is much harder to make a convincing argument about writing style just based off their word frequencies. 
     </p>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
-        More specifically, I was able to make an argument on the similar lack of female pronouns in Othello and Robinson Crusoe which does say something about the lack of importance placed on women in these texts. While women are completely removed from one text, they disappear under the oppressive actions of their male counterparts. My analysis on Fitzgerald specifically however didn’t yield much insightful knowledge at all unfortunately. 
+        More specifically, I was able to make an argument on the similar lack of female pronouns in <em>Othello</em> and <em>Robinson Crusoe</em> which does say something about the lack of importance placed on women in these texts. While women are completely removed from one text, they disappear under the oppressive actions of their male counterparts. My analysis on Fitzgerald specifically however didn’t yield much insightful knowledge at all unfortunately. 
     </p>
     <p class="wrap-text" style="color:black; font-size: 100%; font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif"></style>
         Lastly then, I was able to use ChatGPT to help me figure out how to implement certain tools/calculations into my code to realize the full potential of my ideas in this data analysis. And in moments where I was confused or didn’t know why my code wasn’t working, it was useful to ask the AI interface and be able to resolve the issues without any major breakdowns. 
